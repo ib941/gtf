@@ -4,7 +4,7 @@ export const site = {
   taglineAr: 'حلول صحية متكاملة',
   taglineEn: 'Sanitary Integrated Solutions',
   phones: ['+966573874420', '+966500485132'],
-  whatsapp: '966573874420',
+  whatsapp: '966532562682',
   email: 'gtf@gtf-plastics.com',
   addressAr: 'الملهم، الرياض، المملكة العربية السعودية',
   addressEn: 'Malham, Riyadh, Saudi Arabia',

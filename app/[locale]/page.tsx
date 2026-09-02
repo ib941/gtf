@@ -4,7 +4,7 @@ import { getLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { site, whatsappUrl } from '@/lib/site';
 
-const standards = ['DIN 8077/8078', 'ISO 15874', 'SASO 1738', 'SASO 1739'];
+const standards = ['ISO 9001:2015', 'ISO 45001:2018', 'SABER CoC'];
 
 const families = [
   { code: 'PP-R', name: 'famPpr', desc: 'famPprD' },
