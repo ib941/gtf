@@ -25,11 +25,11 @@ export default function TopBar() {
             </a>
           ))}
           <a
-            href={`mailto:${site.email}`}
+            href={`mailto:${site.emails[0]}`}
             className="flex items-center gap-2 transition-colors hover:text-white"
           >
             <Mail className="h-3.5 w-3.5" />
-            {site.email}
+            {site.emails[0]}
           </a>
         </div>
       </div>
