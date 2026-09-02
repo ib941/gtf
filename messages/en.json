@@ -1,0 +1,55 @@
+{
+  "Brand": {
+    "name": "Green Therm Future",
+    "tagline": "Sanitary Integrated Solutions"
+  },
+  "Navbar": {
+    "home": "Home",
+    "products": "Our Products",
+    "about": "About Us",
+    "sectors": "Sectors",
+    "contact": "Contact Us",
+    "catalog": "Download Catalog"
+  },
+  "Home": {
+    "overline": "Sanitary Integrated Solutions",
+    "heroTitle": "PP-R & PVC Pipes & Fittings to International Standards",
+    "heroSubtitle": "A trusted partner for infrastructure, residential and industrial projects, with quality tested daily in our specialized laboratory.",
+    "ctaCatalog": "Download Catalog (PDF)",
+    "ctaWhatsapp": "Chat on WhatsApp",
+    "s1v": "50",
+    "s1l": "Year warranty on PPR products",
+    "s2v": "Ø20 – Ø160",
+    "s2l": "Pipe sizes (mm)",
+    "s3v": "SASO",
+    "s3l": "Certified conformity",
+    "s4v": "100%",
+    "s4l": "Production batches tested in-house",
+    "standardsTitle": "Compliant with leading standards:",
+    "familiesTitle": "Product Families",
+    "familiesCta": "View All Products",
+    "famPpr": "PPR Pipes & Fittings",
+    "famPprD": "Excellent resistance to heat and pressure, ideal for residential and industrial use.",
+    "famPvc": "PVC Pipes & Fittings",
+    "famPvcD": "Suitable for water and drainage networks, strong and easy to install.",
+    "famMulti": "Multi-Layer Pipes",
+    "famMultiD": "Glass-fiber reinforced layers for higher stability and lower thermal expansion.",
+    "famElec": "Electrical Conduits",
+    "famElecD": "Full insulation and cable protection with UV resistance.",
+    "capPipes": "PP-R pipe production line",
+    "capLab": "Quality lab — batch testing",
+    "aboutOverline": "About Green Therm Future",
+    "aboutTitle": "Quality Starts In Our Laboratory",
+    "aboutText": "We are committed to delivering reliable products that support infrastructure projects and meet the diverse needs of our clients. Every product undergoes rigorous testing in our specialized quality laboratory to ensure reliability and durability.",
+    "aboutLink": "More About Us",
+    "bandTitle": "Need a trusted partner for your next project?"
+  },
+  "Footer": {
+    "about": "A leading Saudi manufacturer of plumbing systems: PP-R & PVC pipes and fittings with world-class quality and a commitment to sustainability.",
+    "quickLinks": "Quick Links",
+    "contactTitle": "Contact Us",
+    "address": "Malham, Riyadh, Saudi Arabia",
+    "rights": "All rights reserved",
+    "catalog": "Technical Catalog (PDF)"
+  }
+}
