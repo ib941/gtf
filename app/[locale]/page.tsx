@@ -9,7 +9,7 @@ const standards = ['ISO 9001:2015', 'ISO 45001:2018', 'SABER CoC'];
 const families = [
   { code: 'PP-R', name: 'famPpr', desc: 'famPprD' },
   { code: 'UPVC', name: 'famPvc', desc: 'famPvcD' },
-  { code: 'MULTI+', name: 'famMulti', desc: 'famMultiD' },
+  { code: 'CPVC', name: 'famCpvc', desc: 'famCpvcD' },
   { code: 'ELEC', name: 'famElec', desc: 'famElecD' },
 ] as const;
 

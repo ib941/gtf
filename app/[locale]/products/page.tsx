@@ -5,34 +5,44 @@ import PageHero from '@/components/PageHero';
 import CertificationsGrid from '@/components/CertificationsGrid';
 import { site } from '@/lib/site';
 
-const families = [
+interface ProductFamily {
+  code: string;
+  nameKey: string;
+  descKey: string;
+  img: string;
+  secondaryImg?: string;
+  badge: string;
+}
+
+const families: ProductFamily[] = [
   {
     code: 'PP-R',
     nameKey: 'pprTitle',
     descKey: 'pprDesc',
-    img: '/media/pipes.jpg',
+    img: '/media/ppr-products.jpg',
     badge: 'DIN 8077 / 8078 & SASO',
   },
   {
     code: 'UPVC',
     nameKey: 'pvcTitle',
     descKey: 'pvcDesc',
-    img: '/media/production-line.jpg',
+    img: '/media/upvc-fittings.jpg',
+    secondaryImg: '/media/upvc-pipes.jpg',
     badge: 'SASO 14 & 15 / ISO 1452',
   },
   {
-    code: 'MULTI+',
-    nameKey: 'multiTitle',
-    descKey: 'multiDesc',
-    img: '/media/lab.jpg',
-    badge: 'Fiber-Glass Reinforced',
+    code: 'CPVC',
+    nameKey: 'cpvcTitle',
+    descKey: 'cpvcDesc',
+    img: '/media/cpvc-systems.jpg',
+    badge: 'ASTM F441 / DIN Standards',
   },
   {
     code: 'ELEC',
     nameKey: 'elecTitle',
     descKey: 'elecDesc',
     img: '/media/conduits-stock.jpg',
-    badge: 'UV Resistant & Halogen Safe',
+    badge: 'SASO IEC 61386 / UV Resistant',
   },
 ];
 
@@ -55,13 +65,48 @@ export default async function ProductsPage() {
                 className="group overflow-hidden border border-zinc-200 bg-white transition-shadow hover:shadow-lg"
               >
                 <div className="relative aspect-[16/9] overflow-hidden bg-zinc-100">
-                  <Image
-                    src={f.img}
-                    alt={t(f.nameKey)}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                  {f.secondaryImg ? (
+                    <div className="grid h-full w-full grid-cols-2 divide-x divide-zinc-200">
+                      <div className="relative h-full w-full overflow-hidden">
+                        <Image
+                          src={f.img}
+                          alt={t(f.nameKey)}
+                          fill
+                          sizes="(max-width: 768px) 50vw, 25vw"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <span
+                          className="absolute bottom-2 start-2 z-10 inline-block transform-none border border-black/40 bg-zinc-950/80 px-2 py-0.5 text-[10px] font-medium text-white backdrop-blur select-none"
+                          dir={isAr ? 'rtl' : 'ltr'}
+                        >
+                          {isAr ? 'القطع والتوصيلات' : 'Fittings'}
+                        </span>
+                      </div>
+                      <div className="relative h-full w-full overflow-hidden">
+                        <Image
+                          src={f.secondaryImg}
+                          alt={`${t(f.nameKey)} - Pipes`}
+                          fill
+                          sizes="(max-width: 768px) 50vw, 25vw"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                        <span
+                          className="absolute bottom-2 start-2 z-10 inline-block transform-none border border-black/40 bg-zinc-950/80 px-2 py-0.5 text-[10px] font-medium text-white backdrop-blur select-none"
+                          dir={isAr ? 'rtl' : 'ltr'}
+                        >
+                          {isAr ? 'الأنابيب' : 'Pipes'}
+                        </span>
+                      </div>
+                    </div>
+                  ) : (
+                    <Image
+                      src={f.img}
+                      alt={t(f.nameKey)}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  )}
                   <div
                     className="absolute start-4 top-4 border border-white/80 bg-white/90 px-3 py-1 text-xs font-bold text-zinc-900 backdrop-blur"
                     dir="ltr"

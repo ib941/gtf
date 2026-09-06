@@ -68,154 +68,163 @@ export default async function AboutPage() {
             </p>
           </div>
 
-          {/* MAIN FACTORY SHOWCASE: production-line.jpg */}
-          <div className="border border-zinc-200 bg-white">
-            <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-900 md:aspect-[21/9]">
-              <Image
-                src="/media/production-line.jpg"
-                alt="GTF Extrusion Production Line"
-                fill
-                priority
-                sizes="(max-width: 1280px) 100vw, 1280px"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-zinc-950/20 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-                <span
-                  className="inline-block border border-white/30 bg-zinc-950/70 px-3 py-1 text-xs font-bold text-white backdrop-blur"
-                  dir="ltr"
-                >
-                  EXTRUSION LINE #01 &mdash; MALHAM PLANT
-                </span>
-                <p className="mt-2 text-sm font-semibold text-zinc-200 md:text-base">
-                  {t('productionLineDesc')}
-                </p>
-              </div>
+          {/* FACILITY CAPABILITY STRIP */}
+          <div
+            className={`grid grid-cols-2 divide-x divide-y divide-zinc-200 border border-zinc-200 bg-white sm:grid-cols-4 sm:divide-y-0 ${
+              isAr ? 'divide-x-reverse' : ''
+            }`}
+          >
+            <div className="p-5">
+              <span className="block text-xs font-semibold text-zinc-500">
+                {isAr ? 'موقع المنشأة' : 'Facility Location'}
+              </span>
+              <span className="mt-1 block font-mono text-sm font-bold text-zinc-900">
+                {isAr ? 'الملهم، الرياض، المملكة العربية السعودية' : 'Malham, Riyadh, KSA'}
+              </span>
             </div>
-
-            <div className="grid grid-cols-1 divide-y divide-zinc-200 border-t border-zinc-200 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
-              <div className="p-5">
-                <span className="block text-xs font-semibold text-zinc-500">
-                  {isAr ? 'موقع المنشأة' : 'Facility Location'}
-                </span>
-                <span className="mt-1 block font-mono text-sm font-bold text-zinc-900">
-                  {isAr ? 'الملهم، الرياض، المملكة العربية السعودية' : 'Malham, Riyadh, KSA'}
-                </span>
-              </div>
-              <div className="p-5">
-                <span className="block text-xs font-semibold text-zinc-500">
-                  {isAr ? 'التحكم الهيدروستاتيكي' : 'Process Control'}
-                </span>
-                <span className="mt-1 block font-mono text-sm font-bold text-zinc-900" dir="ltr">
-                  Ultrasonic &amp; PID Auto-Calibrated
-                </span>
-              </div>
-              <div className="p-5">
-                <span className="block text-xs font-semibold text-zinc-500">
-                  {isAr ? 'نطاق الأقطار المعيارية' : 'Standard Diameters'}
-                </span>
-                <span className="mt-1 block font-mono text-sm font-bold text-brand-700" dir="ltr">
-                  Ø20 mm &mdash; Ø160 mm
-                </span>
-              </div>
+            <div className="p-5">
+              <span className="block text-xs font-semibold text-zinc-500">
+                {isAr ? 'التحكم الهيدروستاتيكي' : 'Process Control'}
+              </span>
+              <span className="mt-1 block font-mono text-sm font-bold text-zinc-900" dir="ltr">
+                Ultrasonic &amp; PID Auto-Calibrated
+              </span>
+            </div>
+            <div className="p-5">
+              <span className="block text-xs font-semibold text-zinc-500">
+                {isAr ? 'نطاق الأقطار المعيارية' : 'Standard Diameters'}
+              </span>
+              <span className="mt-1 block font-mono text-sm font-bold text-brand-700" dir="ltr">
+                Ø20 mm &mdash; Ø160 mm
+              </span>
+            </div>
+            <div className="p-5">
+              <span className="block text-xs font-semibold text-zinc-500">
+                {isAr ? 'معايير الاعتماد' : 'Accreditations'}
+              </span>
+              <span className="mt-1 block font-mono text-sm font-bold text-zinc-900" dir="ltr">
+                SASO &bull; SABER &bull; ISO 9001
+              </span>
             </div>
           </div>
 
-          {/* TWO DEEP-DIVE CARDS: SABIC RAW MATERIALS & LAB */}
+          {/* 4-PILLAR SHARP INDUSTRIAL GRID */}
           <div className="mt-10 grid gap-8 lg:grid-cols-2">
-            {/* CARD 1: SABIC RAW MATERIALS */}
-            <div className="border border-zinc-200 bg-white">
-              <div className="relative aspect-[16/10] overflow-hidden bg-zinc-100">
+            {/* PILLAR 1: MAIN MANUFACTURING / EXTRUSION */}
+            <div className="flex flex-col border border-zinc-200 bg-white">
+              <div className="relative aspect-[16/10] overflow-hidden bg-zinc-900">
                 <Image
-                  src="/media/raw-materials.jpg"
-                  alt="SABIC 100% Virgin Raw Materials"
+                  src="/media/production-line.jpg"
+                  alt="GTF Extrusion Production Line"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 hover:scale-105"
                 />
                 <div className="absolute start-4 top-4">
-                  <span className="border border-brand-600 bg-brand-600 px-3 py-1 text-xs font-bold text-white">
-                    {t('sabicCalloutBadge')}
+                  <span
+                    className="border border-white/30 bg-zinc-950/80 px-3 py-1 font-mono text-xs font-bold text-white backdrop-blur"
+                    dir="ltr"
+                  >
+                    EXTRUSION LINE #01
                   </span>
                 </div>
               </div>
-              <div className="p-6 md:p-8">
-                <h3 className="text-xl font-bold text-zinc-900">
-                  {t('sabicCalloutTitle')}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-zinc-600">
-                  {t('sabicCalloutText')}
-                </p>
-                <ul className="mt-5 space-y-2 border-t border-zinc-100 pt-4 text-xs font-medium text-zinc-700">
-                  <li className="flex items-center gap-2">
+              <div className="flex flex-1 flex-col justify-between p-6 md:p-8">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="h-2 w-2 bg-brand-600" />
+                    <span className="text-xs font-bold uppercase tracking-wider text-brand-700">
+                      {t('productionLineBadge')}
+                    </span>
+                  </div>
+                  <h3 className="mt-2 text-xl font-bold text-zinc-900">
+                    {t('productionLineTitle')}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-zinc-600">
+                    {t('productionLineDesc')}
+                  </p>
+                </div>
+                <ul className="mt-6 space-y-2.5 border-t border-zinc-100 pt-5 text-xs font-medium text-zinc-700">
+                  <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="h-4 w-4 shrink-0 text-brand-600" />
                     <span>
                       {isAr
-                        ? 'بوليمرات نقية معتمدة من سابك بدرجات مخصصة لشبكات الضغط العالي'
-                        : 'Certified SABIC virgin polymer grades for high-pressure networks'}
+                        ? 'مراقبة آلية مستمرة لسماكة الجدار بالموجات فوق الصوتية'
+                        : 'Ultrasonic wall thickness monitoring & PID temperature control'}
                     </span>
                   </li>
-                  <li className="flex items-center gap-2">
+                  <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="h-4 w-4 shrink-0 text-brand-600" />
                     <span>
                       {isAr
-                        ? 'خالية تماماً من المواد المعاد تدويرها (Zero Recycled Scrap)'
-                        : '100% pure polymer with zero recycled regrind content'}
+                        ? 'تغطية شاملة لجميع الأقطار الهندسية من Ø20 مم حتى Ø160 مم'
+                        : 'Comprehensive dimensional range covering Ø20 mm through Ø160 mm'}
                     </span>
                   </li>
-                  <li className="flex items-center gap-2">
+                  <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="h-4 w-4 shrink-0 text-brand-600" />
                     <span>
                       {isAr
-                        ? 'توافق صحي معتمد لمياه الشرب وخمول كيميائي تام'
-                        : 'Full hygienic suitability for potable water networks'}
+                        ? 'معايرة تفريغية وتبريد مائي متزامن لمنع الإجهاد الحراري'
+                        : 'Vacuum calibration and dual cooling baths eliminating thermal stress'}
                     </span>
                   </li>
                 </ul>
               </div>
             </div>
 
-            {/* CARD 2: LAB / DIE-HEAD TOOLING */}
-            <div className="border border-zinc-200 bg-white">
-              <div className="relative aspect-[16/10] overflow-hidden bg-zinc-100">
+            {/* PILLAR 2: QUALITY CONTROL & PRECISION TOOLING */}
+            <div className="flex flex-col border border-zinc-200 bg-white">
+              <div className="relative aspect-[16/10] overflow-hidden bg-zinc-900">
                 <Image
-                  src="/media/lab.jpg"
-                  alt="Precision Extrusion Head & Quality Control"
+                  src="/media/lab-tooling.jpg"
+                  alt="Precision Tooling & Quality Laboratory"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 hover:scale-105"
                 />
                 <div className="absolute start-4 top-4">
-                  <span className="border border-zinc-900 bg-zinc-900 px-3 py-1 text-xs font-bold text-white">
-                    {t('qualityLabBadge')}
+                  <span
+                    className="border border-white/30 bg-zinc-950/80 px-3 py-1 font-mono text-xs font-bold text-white backdrop-blur"
+                    dir="ltr"
+                  >
+                    QUALITY CONTROL &bull; LAB
                   </span>
                 </div>
               </div>
-              <div className="p-6 md:p-8">
-                <h3 className="text-xl font-bold text-zinc-900">
-                  {t('qualityLabTitle')}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-zinc-600">
-                  {t('qualityLabText')}
-                </p>
-                <ul className="mt-5 space-y-2 border-t border-zinc-100 pt-4 text-xs font-medium text-zinc-700">
-                  <li className="flex items-center gap-2">
+              <div className="flex flex-1 flex-col justify-between p-6 md:p-8">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="h-2 w-2 bg-brand-600" />
+                    <span className="text-xs font-bold uppercase tracking-wider text-brand-700">
+                      {t('qualityLabBadge')}
+                    </span>
+                  </div>
+                  <h3 className="mt-2 text-xl font-bold text-zinc-900">
+                    {t('qualityLabTitle')}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-zinc-600">
+                    {t('qualityLabText')}
+                  </p>
+                </div>
+                <ul className="mt-6 space-y-2.5 border-t border-zinc-100 pt-5 text-xs font-medium text-zinc-700">
+                  <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="h-4 w-4 shrink-0 text-brand-600" />
                     <span>
                       {isAr
-                        ? 'قوالب تشكيل من الفولاذ المقاوم للصدأ لضمان الاستدارة التامة'
+                        ? 'قوالب تشكيل من الفولاذ المقاوم للصدأ لضمان الاستدارة التامة وتجانس السطح'
                         : 'Stainless-steel die tooling ensuring exact circularity & wall uniformity'}
                     </span>
                   </li>
-                  <li className="flex items-center gap-2">
+                  <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="h-4 w-4 shrink-0 text-brand-600" />
                     <span>
                       {isAr
                         ? 'اختبارات هيدروستاتيكية واختبارات تمزق وانفجار لكل دفعة تصنيع'
-                        : 'Continuous hydrostatic burst and tensile verification per batch'}
+                        : 'Continuous hydrostatic burst and tensile verification per production batch'}
                     </span>
                   </li>
-                  <li className="flex items-center gap-2">
+                  <li className="flex items-center gap-2.5">
                     <CheckCircle2 className="h-4 w-4 shrink-0 text-brand-600" />
                     <span>
                       {isAr
@@ -224,6 +233,200 @@ export default async function AboutPage() {
                     </span>
                   </li>
                 </ul>
+              </div>
+            </div>
+
+            {/* PILLAR 3: RAW MATERIALS (SABIC GUARANTEE) */}
+            <div className="flex flex-col border border-zinc-200 bg-white">
+              <div className="relative aspect-[16/10] overflow-hidden bg-zinc-900">
+                <Image
+                  src="/media/raw-materials.jpg"
+                  alt="SABIC 100% Virgin Raw Materials"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                />
+                <div className="absolute start-4 top-4">
+                  <span className="border border-brand-600 bg-brand-600 px-3 py-1 font-mono text-xs font-bold text-white">
+                    100% VIRGIN SABIC
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-1 flex-col justify-between p-6 md:p-8">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="h-2 w-2 bg-brand-600" />
+                    <span className="text-xs font-bold uppercase tracking-wider text-brand-700">
+                      {t('sabicCalloutBadge')}
+                    </span>
+                  </div>
+                  <h3 className="mt-2 text-xl font-bold text-zinc-900">
+                    {t('sabicCalloutTitle')}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-zinc-600">
+                    {t('sabicCalloutText')}
+                  </p>
+                </div>
+                <ul className="mt-6 space-y-2.5 border-t border-zinc-100 pt-5 text-xs font-medium text-zinc-700">
+                  <li className="flex items-center gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-brand-600" />
+                    <span>
+                      {isAr
+                        ? 'بوليمرات نقية معتمدة من سابك بدرجات مخصصة لشبكات الضغط العالي'
+                        : 'Certified SABIC virgin polymer grades for high-pressure networks'}
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-brand-600" />
+                    <span>
+                      {isAr
+                        ? 'خالية تماماً من المواد المعاد تدويرها (Zero Recycled Regrind Scrap)'
+                        : '100% pure polymer with zero recycled regrind content'}
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-brand-600" />
+                    <span>
+                      {isAr
+                        ? 'توافق صحي معتمد لمياه الشرب وخمول كيميائي تام ضد الرواسب والتآكل'
+                        : 'Full hygienic suitability for potable water networks and scale immunity'}
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* PILLAR 4: SUPPLY CHAIN & FACILITY SCALE */}
+            <div className="flex flex-col border border-zinc-200 bg-white">
+              <div className="relative aspect-[16/10] overflow-hidden bg-zinc-900">
+                <Image
+                  src="/media/warehouse.jpg"
+                  alt="Warehouse and Strategic Supply Chain"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-500 hover:scale-105"
+                />
+                <div className="absolute start-4 top-4">
+                  <span
+                    className="border border-white/30 bg-zinc-950/80 px-3 py-1 font-mono text-xs font-bold text-white backdrop-blur"
+                    dir="ltr"
+                  >
+                    CENTRAL LOGISTICS HUB
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-1 flex-col justify-between p-6 md:p-8">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="h-2 w-2 bg-brand-600" />
+                    <span className="text-xs font-bold uppercase tracking-wider text-brand-700">
+                      {t('warehouseBadge')}
+                    </span>
+                  </div>
+                  <h3 className="mt-2 text-xl font-bold text-zinc-900">
+                    {t('warehouseTitle')}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-zinc-600">
+                    {t('warehouseText')}
+                  </p>
+                </div>
+                <ul className="mt-6 space-y-2.5 border-t border-zinc-100 pt-5 text-xs font-medium text-zinc-700">
+                  <li className="flex items-center gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-brand-600" />
+                    <span>
+                      {isAr
+                        ? 'طاقة استيعابية مظللة تحمي الأنابيب والقطع من العوامل الجوية والأشعة'
+                        : 'High-capacity covered storage preserving products from weathering and UV'}
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-brand-600" />
+                    <span>
+                      {isAr
+                        ? 'جاهزية توريد فوري ومخزون استراتيجي دائم لكبرى مشروعات البنية التحتية'
+                        : 'Immediate fulfillment readiness maintaining continuous supply for mega works'}
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-2.5">
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-brand-600" />
+                    <span>
+                      {isAr
+                        ? 'إدارة لوجستية متطورة تغطي كافة مدن ومناطق المملكة العربية السعودية'
+                        : 'Integrated nationwide distribution fleet covering all regions across KSA'}
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* SECONDARY INDUSTRIAL GALLERY STRIP */}
+          <div className="mt-12 border-t border-zinc-200 pt-10">
+            <div className="mb-6 flex items-center justify-between">
+              <h4 className="text-sm font-bold uppercase tracking-wider text-zinc-700">
+                {isAr ? 'مراحل خطوط الإنتاج والمعايرة' : 'Production & Calibration Processes'}
+              </h4>
+              <span className="text-xs font-mono text-zinc-400">GTF-PLANT-01</span>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-3">
+              <div className="transform-none border border-zinc-200 bg-white">
+                <div className="relative aspect-[4/3] overflow-hidden bg-zinc-100">
+                  <Image
+                    src="/media/calibration-line.jpg"
+                    alt="Calibration line"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+                <div className="p-4" dir={isAr ? 'rtl' : 'ltr'}>
+                  <p className="text-xs font-bold text-zinc-900">
+                    {isAr ? 'أحواض المعايرة والتبريد الفراغي' : 'Vacuum Calibration & Cooling Tanks'}
+                  </p>
+                  <p className="mt-1 text-[11px] leading-relaxed text-zinc-500">
+                    {isAr ? 'تثبيت الأبعاد الهندسية ومنع الانكماش الحراري' : 'Dimensional stabilizing and uniform cooling'}
+                  </p>
+                </div>
+              </div>
+
+              <div className="transform-none border border-zinc-200 bg-white">
+                <div className="relative aspect-[4/3] overflow-hidden bg-zinc-100">
+                  <Image
+                    src="/media/conduit-extrusion.jpg"
+                    alt="Conduit extrusion line"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+                <div className="p-4" dir={isAr ? 'rtl' : 'ltr'}>
+                  <p className="text-xs font-bold text-zinc-900">
+                    {isAr ? 'بثق المواسير الكهربائية' : 'Conduit Extrusion Process'}
+                  </p>
+                  <p className="mt-1 text-[11px] leading-relaxed text-zinc-500">
+                    {isAr ? 'خطوط إنتاج مستمرة مع وسم المواصفات الدقيق' : 'High-capacity extrusion with precision laser marking'}
+                  </p>
+                </div>
+              </div>
+
+              <div className="transform-none border border-zinc-200 bg-white">
+                <div className="relative aspect-[4/3] overflow-hidden bg-zinc-100">
+                  <Image
+                    src="/media/pipes-alt.jpg"
+                    alt="Pipes stacking and inspection"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+                <div className="p-4" dir={isAr ? 'rtl' : 'ltr'}>
+                  <p className="text-xs font-bold text-zinc-900">
+                    {isAr ? 'فحص ومطابقة حزم الأنابيب' : 'Pipe Stacking & Batch Inspection'}
+                  </p>
+                  <p className="mt-1 text-[11px] leading-relaxed text-zinc-500">
+                    {isAr ? 'تجهيز وحزم معيارية قبل النقل إلى المستودعات' : 'Standard bundling and safety packaging for dispatch'}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
